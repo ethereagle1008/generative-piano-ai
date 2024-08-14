@@ -9,7 +9,7 @@ In this readme, we explain how the AI works and go into details about the model'
 ## Overview
 
 Music can be represented in many ways, ranging from raw audio waveforms to semi-structured MIDI standards. In Pianola, we break up musical beats into regular, uniform intervals (e.g. sixteenth notes/semiquavers). Notes played within an interval are considered to belong to the same timestep, and a series of timesteps forms a sequence. Using the grid-based sequence as input, the AI model predicts the notes in the next timestep, which in turn is used as input for predicting the subsequent timestep in an autoregressive manner.
-
+ 
 In addition to the notes to play, the model also predicts the *duration* (length of time the note is held down) and *velocity* (how hard a key is struck) of each note.
 
 ## Model Architecture
